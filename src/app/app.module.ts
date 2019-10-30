@@ -9,6 +9,7 @@ import { AdminComponent } from './admin/admin.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AuGuard } from './au.guard';
+import { GitAssetComponent } from './git-asset/git-asset.component';
 
 
 
@@ -18,6 +19,7 @@ import { AuGuard } from './au.guard';
     AppComponent,
     LoginComponent,
     AdminComponent,
+    GitAssetComponent,
     
   ],
   imports: [
