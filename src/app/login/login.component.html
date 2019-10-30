@@ -1,0 +1,25 @@
+
+<h1 style="text-align: center">Login</h1>
+
+
+<div class=login>
+<form [formGroup]="loginForm" class="login-container" (ngSubmit)="login()">
+
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.username.errors}">
+        <input type="email" placeholder="Email" formControlName="email">
+    </p>
+    
+    <div *ngIf="isSubmitted && formControls.username.errors" class="help-block"> 
+        <div *ngIf="formControls.username.errors.required">Username is required</div>
+    </div>
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors}">
+        <input type="password" placeholder="password" formControlName="password">
+    </p>
+
+    <div *ngIf="isSubmitted && formControls.password.errors" class="help-block"> 
+        <div *ngIf="formControls.password.errors.required">Password is required</div>
+    </div>
+<input type="submit" value="login">
+
+</form>
+</div>
